@@ -56,7 +56,6 @@ class WeatherService {
                 date: prevDay,
                 hourlyWeather: hourlyWeatherArr,
             })
-            console.log("after loop", weekWeather)
             return weekWeather
         }
     }

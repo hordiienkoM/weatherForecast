@@ -24,7 +24,6 @@ export default class Favorite extends TSX<Props, Emits>()(Vue) {
 
     private updCities() {
         this.cities = cityStorage.getCities()
-        console.log("favoriteCitiesList", this.cities)
     }
 
     private handleChangeCityList() {

@@ -34,7 +34,6 @@ export default class AutoCompleteInput extends TSX<Props, Emits>()(Vue) {
         const options: string[] = []
         const selectedCity: string = this.selectedCity?.toLowerCase()
         for (const city of this.cityList) {
-            console.log(city.toLowerCase(), selectedCity)
             if (city.toLowerCase().startsWith(selectedCity)) {
                 options.push(city)
                 if (options.length === 3) {

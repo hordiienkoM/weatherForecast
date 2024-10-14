@@ -13,7 +13,6 @@ class CityService {
                     alertError("Error while fetching the city by default IP")
                 }
             }).then(parsedResponse => {
-                console.log("parsedResponse.loc", parsedResponse.loc)
                 const [lat, lon] = parsedResponse.loc.split(",")
                 return {
                     name: parsedResponse.city,

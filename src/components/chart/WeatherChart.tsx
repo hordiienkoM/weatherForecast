@@ -50,7 +50,6 @@ export default class WeatherChart extends TSX<Props>()(Vue) {
             this.chartData = undefined
             return
         }
-        console.log("settingsUpd", this.settings)
         this.updateMinMax()
         this.chartData = {
             labels: this.settings.labels,

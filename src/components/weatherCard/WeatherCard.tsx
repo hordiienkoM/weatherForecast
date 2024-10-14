@@ -68,7 +68,6 @@ export default class WeatherCard extends TSX<Props, Emits>()(Vue) {
                 .map(weather => dayParamCalculator.createWeekDayDto(weather, this.dictionary))
             this.updCurrentWeatherTemperatureSet()
             this.updWeatherChartSettings()
-            console.log("daily weather after convert", this.weekWeatherDto)
         }
     }
 
@@ -80,7 +79,6 @@ export default class WeatherCard extends TSX<Props, Emits>()(Vue) {
         }
         this.currentWeatherDto = dayParamCalculator.createWeekDayDto(this.currentWeather, this.dictionary)
         this.updCurrentWeatherTemperatureSet()
-        console.log("currentWeatherDto", this.currentWeatherDto)
         this.currentWeatherDto.temperature = this.currentWeather.hourlyWeather[0].temperature2m
         this.currentWeatherDto.apparentTemperature = this.currentWeather.hourlyWeather[0].apparentTemperature
         this.updWeatherChartSettings()
@@ -121,18 +119,15 @@ export default class WeatherCard extends TSX<Props, Emits>()(Vue) {
         if (!this.city) {
             return
         }
-        console.log("city when fetch called", this.city)
         weatherService.fetchWeekWeather(this.city.lat, this.city.lon)
             .then(weekWeather => {
                 if (weekWeather && weekWeather.length > 0) {
-                    console.log("weather before converting", weekWeather, this.dictionary)
                     this.weekWeather = weekWeather
                 }
             })
         weatherService.fetchCurrentWeather(this.city.lat, this.city.lon)
             .then(currentWeather => {
                 if (currentWeather?.date) {
-                    console.log("current weather before converting", currentWeather, this.dictionary)
                     this.currentWeather = currentWeather
                 }
             })
