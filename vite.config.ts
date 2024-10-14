@@ -5,6 +5,9 @@ import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 
 export default defineConfig({
+  server: {
+    host: true
+  },
   build: {
     sourcemap: true,
   },
@@ -19,5 +22,6 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
-  }
+  },
+  base: '/weatherForecast/'
 })
