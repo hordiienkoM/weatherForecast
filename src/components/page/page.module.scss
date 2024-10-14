@@ -1,0 +1,20 @@
+@use "@/styles/vars" as vars;
+
+.page {
+  width: 100vw;
+  max-width: 100%;
+  min-height: 100vh;
+  background-color: vars.$main-bg-color;
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
+  overflow-y: auto;
+  gap: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+
+  .padding__top {
+    height: 70px;
+    min-height: 70px;
+  }
+}

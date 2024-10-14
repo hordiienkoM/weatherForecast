@@ -1,0 +1,21 @@
+@import 'normalize.css/normalize';
+@import './vars';
+
+html, body, p, h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+  scrollbar-width: none !important;
+}
+
+button, input {
+  font-family: 'Roboto', sans-serif;
+}
+
+button {
+  cursor: pointer;
+}

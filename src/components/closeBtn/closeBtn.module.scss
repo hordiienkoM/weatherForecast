@@ -1,0 +1,17 @@
+@use "@/styles/vars" as vars;
+
+.closeBtn {
+  width: 25px;
+  height: 25px;
+  border: none;
+  border-radius: 4px;
+  background-image: url("@/ui/svg/close.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+
+  &:hover {
+    border: 1px solid vars.$hover-dark-blue;
+  }
+}

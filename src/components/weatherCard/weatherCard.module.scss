@@ -1,0 +1,43 @@
+@use "@/styles/vars" as vars;
+
+.weatherCard {
+  display: flex;
+  max-width: 100%;
+  min-height: 200px;
+  height: min-content;
+  padding: 50px 15px 15px 15px;
+  border: 2px solid vars.$main-dark-blue;
+  background-color: white;
+  border-radius: 6px;
+  position: relative;
+
+  &__navContainer {
+    padding: 0;
+    position: absolute;
+    top: 10px;
+  }
+}
+
+.weekContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+
+  &__shortView {
+    display: grid;
+    gap: 10px;
+    font-size: 14px;
+    width: 100%;
+    grid-template-columns: 90px 30px 40px auto;
+    padding: 5px;
+    border: 1px solid vars.$border-light-gray-color;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  & img {
+    height: 25px;
+    width: 25px;
+  }
+}

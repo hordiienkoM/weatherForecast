@@ -1,0 +1,18 @@
+@use "@/styles/vars" as vars;
+
+.favoriteList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &__emptyMsg {
+    max-width: 100%;
+    height: min-content;
+    padding: 15px;
+    border: 2px solid vars.$main-dark-blue;
+    background-color: vars.$main-block-color;
+    border-radius: 6px;
+    gap: 20px;
+    margin: 0 10px 30px;
+  }
+}
